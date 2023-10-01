@@ -1,4 +1,4 @@
-import { searchImages } from './js/pixabay-api.js';
+import { searchImages } from './pixabay-api.js';
 import Notiflix from 'notiflix';
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
