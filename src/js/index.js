@@ -12,7 +12,7 @@ let currentPage = 1;
 let simpleLightboxInstance;
 const perPage = 40;
 
-loadMoreBtn.classList.add('is-hidden'); // Початково ховаємо кнопку "Load More"
+loadMoreBtn.classList.add('is-hidden');
 
 searchForm.addEventListener('submit', handleSubmit);
 loadMoreBtn.addEventListener('click', handleLoadMore);
