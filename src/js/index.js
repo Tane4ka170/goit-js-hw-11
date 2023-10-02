@@ -36,6 +36,7 @@ async function handleSubmit(event) {
   currentPage = 1;
   currentQuery = event.currentTarget.elements.searchQuery.value.trim();
   gallery.innerHTML = '';
+  loadMoreBtn.classList.add('is-hidden');
 
   if (currentQuery === '') {
     Notiflix.Notify.failure(
@@ -46,14 +47,6 @@ async function handleSubmit(event) {
 
   try {
     const response = await fetchImages(currentQuery, currentPage, perPage);
-
-    if (response.hits.length < perPage) {
-      loadMoreBtn.classList.add('is-hidden');
-      loadMoreBtn.disabled = true;
-    } else {
-      loadMoreBtn.classList.remove('is-hidden');
-      loadMoreBtn.disabled = false;
-    }
 
     if (response.totalHits === 0) {
       Notiflix.Notify.failure(
@@ -70,6 +63,7 @@ async function handleSubmit(event) {
       Notiflix.Notify.success(
         `Hooray! We found ${response.totalHits} images.`
       );
+      loadMoreBtn.classList.remove('is-hidden');
     }
   } catch (error) {
     handleFetchError(error);
