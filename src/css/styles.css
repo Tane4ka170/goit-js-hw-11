@@ -1,0 +1,64 @@
+.container {
+    margin: 20px;
+}
+
+img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+a {
+    text-decoration: none;
+}
+button {
+    padding: 10px 20px;
+    color: #66706e;;
+    background-color: #8df7f8;
+    border: 2px solid #1c86e3;
+    border-radius: 6px;
+}
+
+.search-form {
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    background-color: #493a5b;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 20px;
+}
+
+.info {
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid #85878842; 
+}
+.info p {
+    display: grid;
+    text-align: center;
+    color: #656f79;
+}
+
+.load-more {
+    display: flex;
+    margin-inline: auto;
+    margin-top: 20px;
+}
+
+.is-hidden{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
