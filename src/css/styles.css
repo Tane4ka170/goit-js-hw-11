@@ -17,6 +17,12 @@ button {
     background-color: #8df7f8;
     border: 2px solid #1c86e3;
     border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #2e04a1;
+    border: 2px solid #2c8de6;
 }
 
 .search-form {
@@ -49,6 +55,7 @@ button {
     display: flex;
     margin-inline: auto;
     margin-top: 20px;
+    cursor: pointer;
 }
 
 .is-hidden{
