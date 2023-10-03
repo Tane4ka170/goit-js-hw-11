@@ -107,7 +107,7 @@ function createMarkup(images) {
 async function handleLoadMore() {
   currentPage += 1;
   simpleLightboxInstance.destroy();
-  // loadMoreBtn.disabled = true;
+
 
   try {
     const response = await fetchImages(currentQuery, currentPage, perPage);
